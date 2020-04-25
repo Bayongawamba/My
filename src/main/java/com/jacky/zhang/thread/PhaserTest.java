@@ -41,11 +41,11 @@ public class PhaserTest {
                 case 3:
                     System.out.println("婚礼结束！新郎新娘拥抱" + registeredParties);
                     System.out.println();
-                    return false;
-                case 4:
-                    System.out.println("入洞房，生孩子" + registeredParties);
-                    System.out.println();
                     return true;
+//                case 4:
+//                    System.out.println("入洞房，生孩子" + registeredParties);
+//                    System.out.println();
+//                    return true;
                 default:
                     return true;
             }
