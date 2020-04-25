@@ -1,4 +1,4 @@
-package com.jacky.zhang;
+package com.jacky.zhang.thread;
 
 import java.util.concurrent.CountDownLatch;
 
