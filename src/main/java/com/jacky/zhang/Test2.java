@@ -1,25 +1,27 @@
 package com.jacky.zhang;
 
+import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.length;
+
 public class Test2 {
-    public static boolean isPalindrome(int x) {
-        if(x>=0){
-            int s = x;
-            int res = 0;
-            while (x>0) {
-                int pop = x % 10;
-                res = res * 10 + pop;
-                x=x/10;
-            }
-            if(s==res){
-                return true;
-            }
-            return false;
+    public static int lengthOfLastWord(String s) {
+        int end = s.length()-1;
+        if(end < 0){
+            return 0;
         }
-        return false;
+        while (end>=0 && s.charAt(end) == ' '){
+            end--;
+
+        }
+
+        int start = end;
+        while (start>=0 && s.charAt(start) != ' '){
+            start--;
+        }
+        return end-start;
     }
 
 
     public static void main(String[] args) {
-        System.out.println(Test2.isPalindrome(121));
+        System.out.println(Test2.lengthOfLastWord("s"));
     }
 }
